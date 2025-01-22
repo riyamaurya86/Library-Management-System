@@ -1,0 +1,30 @@
+/* .sec{
+    margin-top: 50px;
+} */
+.about{
+    width: 500px;
+    height: 400px;
+}
+
+.para{
+    padding-right: 162px;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.form-btn{
+    display: block;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background: #7c4dff;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,119 @@
+.sec{
+    margin-top: 50px;
+}
+.contact-form{
+    padding: 5rem 0rem;
+    background: #f7f7f7;
+}
+.form-wrapper .company-address{
+    background: white;
+    width: 49%;
+    float: left;
+    padding: 1rem;
+    height: 760px;
+}
+.form{
+    width: 49%;
+    float: right;
+}
+.form-wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.form-wrapper .company-address i{
+    display: inline-block;
+    margin-right: 1rem;
+}
+.form-wrapper .company-address h2{
+    display: inline-block;
+    margin-right: 1rem;
+    text-transform: uppercase;
+}
+.company-address .address{
+    margin-bottom: 3rem;
+}
+.form-wrapper .company-address img{
+    max-width: 90%;
+    min-height: 40rem;
+    object-fit: cover;
+    object-position: center;
+}
+.form-wrapper .form{
+    height: 760px;
+    font-size: 1.6rem;
+    background: white;
+    width: 49%;
+    float: right;
+    padding: 1rem;
+}
+.form h1::after{
+    content: '';
+    display: block;
+    border: 3px solid #7c4dff;
+    width: 100%;
+}
+.form-wrapper label{
+    display: block;
+}
+.form-wrapper .form input{
+    padding: 0.5rem;
+    width: 100%;
+}
+.form-wrapper .form .group{
+    margin-bottom: 1.2rem;
+}
+.form-wrapper .form label::after{
+    content: '* ';
+    color: #d64c7f;
+}
+.form-wrapper .form textarea{
+    width: 100%;
+    height: 300px;
+    padding: 1rem;
+}
+.form-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 3em;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background: #7c4dff;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.textred{
+    color: #7c4dff;
+}
+.text-gray{
+    color: gray;
+}
+.md-heading{
+    font-size: 1.5rem
+}
+.team{
+    text-align: center;
+    background: linear-gradient(25deg,#d64c7f,#7c4dff 50%);
+}
+.texta{
+    padding-left: 10%;
+}
+.bg{
+    background: linear-gradient(25deg,#d64c7f,#7c4dff 50%);
+}
+.company-address .right{
+    float: right;
+    width: 40%;
+}
+.company-address .left{
+    float: left;
+    width: 40%;
+}
+.foon{
+    font-weight: 700;
+}
+.down{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,9 @@
+[{
+    "studentId": "12345", "studentName":"Riya", "contactNo":"9827465842", "dob": "24/06/23", "address":"Anand Nagar, Dahisar(e), Mumbai-400068", "adharCard": "987718378472", "expiryDate": "9/07/23"
+},
+{
+"studentId": "65423", "studentName":"Divya", "contactNo":"8364948598", "dob": "13/08/2005", "address":"Shakti Nagar, Dahisar(e), Mumbai-400068", "adharCard": "987718378472", "expiryDate": "9/07/23"
+},
+{
+        "studentId": "11111", "studentName":"Manisha", "contactNo":"9191948598", "dob": "29/02/2004", "address":"Devi Nagar, Dahisar(e), Mumbai-400068", "adharCard": "999188878472", "expiryDate": "15/07/23"
+}]

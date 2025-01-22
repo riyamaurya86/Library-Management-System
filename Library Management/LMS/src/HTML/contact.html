@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <div id="includeHtml"></div>
+    <script>
+        $(function () {
+            $("#includeHtml").load("../mainHeader.html");
+        });
+    </script>
+
+
+    <title>contact page</title>
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <script src="https://kit.fontawesome.com/f91b8bf685.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script id="replace_with_navbar" src="..\JS\nav-bar.js"></script>
+    <section class="contact-form sec">
+        <div>
+            <div class="form-wrapper">
+                <div class="company-address">
+                    <h1 class="foon textred texta down">Feel free to contact us!</h1>
+                    <div class="">
+                        <div class="group-address">
+                            <i class="fas fa-map-marker-alt fa-3x textred texta" aria-hidden="true"></i>
+                            <h2 class="text-gray md-heading foon">location</h2>
+                            <p class="texta">world of books, mumbai-400060,india</p>
+                        </div>
+                        <div class="group-address">
+                            <i class="far fa-envelope fa-3x textred texta" aria-hidden="true"></i>
+                            <h2 class="text-gray md-heading foon">E-mail</h2>
+                            <p class="texta">libraryofbooks@323.com</p>
+                        </div>
+                        <div class="group-address">
+                            <i class="fas fa-phone-square-alt fa-3x textred texta" aria-hidden="true"></i>
+                            <h2 class="text-gray md-heading foon">call</h2>
+                            <p class="texta">+9789532345</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        
+                    </div>
+                    <img src="../../resources/imges/library.jpg" alt="company">
+                </div>
+                <form action="" class="form">
+                    <h1 class="lg-heading team"> Contact Us</h1>
+                    <p class="text-gray">what are you waiting for let's learn something new if you have any query fill
+                        this form out</p>
+                    <div class="group">
+                        <label for="username">Username</label>
+                        <input type="text" name="" id="username" required="">
+                    </div>
+                    <div class="group">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="" id="email" required="">
+                    </div>
+                    <div class="group">
+                        <label for="phone">Phone</label>
+                        <input type="text" name="" id="phone" required="" maxlength="10">
+                    </div>
+                    <div class="group">
+                        <label for="message">Message</label>
+                        <textarea name="" id="message" required=""></textarea>
+                    </div>
+                    <button type="submit" class="form-btn">Sumbit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script id="replace_with_footer" src="../JS/footer.js"></script>
+    <script src="../JS/contact.js"></script>
+</body>
+
+</html>

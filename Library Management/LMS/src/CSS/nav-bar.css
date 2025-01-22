@@ -1,0 +1,20 @@
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+    padding-top: 60px;
+  }
+
+  .navbar-brand {
+    height: auto;
+  }
+  .navbar-nav {
+      padding-top: 10px;
+  }
+  .active, .btn:hover {
+    background-color: #666;
+    color: white;
+  }

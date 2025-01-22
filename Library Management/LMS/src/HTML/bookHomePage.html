@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap.min.css">
+  <div id="includeHtml"></div>
+  <script>
+    $(function () {
+      $("#includeHtml").load("../mainHeader.html");
+    });
+  </script>
+  <script src="../JS/bookService.js"></script>
+  <link rel="stylesheet" href="../CSS/services.css">
+
+  <title>Book home page</title>
+</head>
+
+<body>
+  <script id="replace_with_navbar" src="../JS/nav-bar.js"></script>
+
+  <div id="message" class="container1"></div>
+
+  <div class="container-float bg-blue">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Book Page</h3>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-11">
+      <button class="btn btf pull-right addStudentBtn" data-toggle="modal" data-target=".bd-example-modal-lg"
+        id="first">Add
+        Book</button>
+    </div>
+  </div>
+  </div>
+
+  <table id="bookTable" class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Book Id</th>
+        <th scope="col">Book Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Action</th>
+        <th class="hidden">Issue date</th>
+        <th class="hidden">Return date</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <tr>
+        <td>345965</td>
+        <td>Riya</td>
+        <td>piya</td>
+        <td>2</td>
+        <td>
+          <button type="button" class="btn btf edit" data-toggle="modal" data-target=".bd-example-modal-lg "
+            onclick="view(this)">View</button>
+          <button type="button" class="btn btf" id="edit" data-toggle="modal" data-target=".bd-example-modal-lg"
+            onclick="edit(this)">Edit</button>
+          <button type="button" class="btn btf" id="del" onclick="del(this)">Delete</a></button>
+        </td>
+        <td class="hidden">05/01/2023</td>
+        <td class="hidden">15/01/2023</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true" id="bookmodal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="flex">
+          <h3 class="col"><strong>Enter Book Detail</strong></h3>
+          <button type="button" class="bts btk" aria-label="Close" data-dismiss="modal">
+
+            <span class="glyphicon glyphicon-remove"></span>
+
+          </button>
+        </div>
+        <br>
+
+        <div class="form-group">
+          <div class="col">
+            <label for="usr"><strong>Book Id</strong></label>
+            <input class="form-control inputgray" id="bookId" placeholder="Book Id" type="tel" size="100%"
+              onkeypress="return /[0-9]/i.test(event.key)" maxlength="5" required />
+          </div>
+        </div>
+        <div>
+          <div class="form-group">
+            <div class="col">
+              <label for="usr"><strong>Book Name :</strong></label>
+              <input type="text" class="form-control inputgray" id="bookName" placeholder="Name"
+                onkeydown="return /[a-zA-Z ]/i.test(event.key)" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col">
+            <label for="usr"><strong>Author</strong></label>
+            <input type="text" class="form-control inputgray" id="bookAuthor" placeholder="Name"
+              onkeydown="return /[a-zA-Z ]/i.test(event.key)" required />
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <div class="col">
+            <label for="usr"><strong>Quantity</strong></label>
+            <input class="form-control inputgray" placeholder="Quantity" id="bookQuantity" type="tel" size="100%"
+              onkeypress="return /[0-9]/i.test(event.key)" maxlength="1" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col">
+            <label for="usr"><strong>Issue Date :</strong></label>
+            <div class="input-group date">
+              <input type="text" class="form-control inputgray" placeholder="MM/DD/YYYY" id="bookdatepicker1">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-calendar"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col">
+            <label for="usr"><strong>Expiry Date :</strong></label>
+            <div class="input-group date" id="datetimepicker2">
+              <input type="text" class="form-control inputgray" placeholder="MM/DD/YYYY" id="bookdatepicker2">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-calendar"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+        <br>
+        <div class="bth">
+          <button type="button" class="bm btn
+                      btn-outline-success" id="submitstudent" data-dismiss="modal">ADD</button>
+                      <button type="button" class="bm btn-outline-success btn" id="savestudent" data-dismiss="modal">save</button>
+                  <button type="button" class="btn
+                      btn-outline-danger" id="btnclose" data-dismiss="modal">CANCEL</button>
+        </div>
+        <br><br>
+      </div>
+    </div>
+
+</body>
+
+
+<script src="../JS/bookService.js"></script>
+
+</html>
